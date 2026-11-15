@@ -1,0 +1,25 @@
+SMART ALARM — FINAL PHONE-ONLY GITHUB BUILD PACKAGE
+
+All Android source files in this ZIP are side-by-side. There are no nested project folders.
+
+IMPORTANT: GitHub Actions requires one workflow file at this exact path:
+.github/workflows/build-apk.yml
+You create it on GitHub using Add file > Create new file. GitHub will create the folders from the path.
+
+STEPS:
+1. Extract this ZIP on your phone.
+2. Create a GitHub repository named SmartAlarm.
+3. Upload every file from the extracted folder to the repository root. Upload the files whose names start with UPLOAD__, plus RESTORE_PROJECT.sh. Do not upload the ZIP itself.
+4. In the GitHub repository, tap Add file > Create new file.
+5. Enter this exact filename: .github/workflows/build-apk.yml
+6. Open WORKFLOW_FILE_CONTENT.txt on your phone, copy all its contents, and paste into the GitHub editor.
+7. Commit the new file.
+8. Open the Actions tab. Select Build Smart Alarm APK, then Run workflow.
+9. When the run finishes successfully, open the run and download the SmartAlarm-debug-apk artifact.
+10. Extract the artifact ZIP and install app-debug.apk.
+
+The workflow rebuilds the Android project directory tree from the flat source files, then builds the APK in GitHub's cloud runner.
+
+The resulting APK is a debug APK. On the phone, allow install from the app used to open the APK. After installation, grant Notifications, Alarms & reminders/exact alarm access, and Full-screen notification access if offered. Set battery usage to Unrestricted. Test with a short alarm while the screen is locked.
+
+This package is source code and workflow instructions, not an already-built APK.
